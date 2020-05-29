@@ -21,6 +21,9 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib.ticker import NullLocator
 
+from loadData import *
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--image_folder", type=str, default="data/samples", help="path to dataset")
@@ -35,6 +38,9 @@ if __name__ == "__main__":
     parser.add_argument("--checkpoint_model", type=str, help="path to checkpoint model")
     opt = parser.parse_args()
     print(opt)
+    
+    # run options:
+    # --image_folder ../data/midair/datasets/small_subset --model_def config/yolov3-custom.cfg --weights_path checkpoints/yolov3_ckpt_2.pth --class_path data/custom/classes.names
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

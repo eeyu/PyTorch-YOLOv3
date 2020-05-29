@@ -10,3 +10,7 @@ backup
 weights/*.weights
 __pycache__
 checkpoints
+*.74
+*.pth
+*.pyc
+logs/*
